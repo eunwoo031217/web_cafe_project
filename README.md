@@ -33,8 +33,19 @@ CI/CD 자동 배포, Docker + Nginx 구성, 외부 API 연동 등을 적용했�
 
 ---
 
+### Docker 로컬 실행
+
+Docker 및 Nginx로 정적 빌드 파일을 실행하려면:
+
+```bash
+npm run build
+docker build -t nginx-proxy .
+docker run -d -p 8080:80 nginx-proxy
+```
+
 ### 실행 방법 (로컬 개발)
 
 ```bash
 npm install
 npm run dev
+```
